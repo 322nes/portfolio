@@ -60,15 +60,16 @@ $(function () {
 
 // ========================================================
 
-$('.header_main-all-link').on('click', function (e) {
-  e.preventDefault()
-})
-
 $('.header_main-all-link, .overlay').on('click', function (e) {
+  e.preventDefault();
   $('.header_main-all-acc').toggleClass('header_main-all-acc-active')
   $('.main-img-all-svg').toggleClass('main-img-all-svg-active')
   $('.overlay').toggleClass('overlay-show')
 })
+
+// $('.header_main-all-link, .overlay').on('click', function (e) {
+
+// });
 
 // ========================================================
 

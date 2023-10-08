@@ -24,7 +24,9 @@ body {
 }
 
 .overlay-show {
-  background: radial-gradient(at center bottom, #010101bd, #ffffff0d);
+  /* background: radial-gradient(at center bottom, #010101bd, #ffffff0d); */
+  /* background: linear-gradient(0deg, #010101, #696969); */
+  background: linear-gradient(0deg, #010101ad, #6969697d);
   position: fixed;
   top: 0;
   right: 0;
