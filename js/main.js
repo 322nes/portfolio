@@ -35,7 +35,7 @@
 //   }, 300);
 // }
 
-$(function () {
+function a() {
   setInterval(() => {
     if ($(window).scrollTop() > 930) {
       $('.header_nav-logo').addClass('_active-logo')
@@ -43,8 +43,10 @@ $(function () {
       $('.header_nav-logo').removeClass('_active-logo')
     }
   }, 0);
-})
-$(function () {
+};
+
+function b() {
+
   setInterval(() => {
     if ($(window).scrollTop() > 70 && $(window).scrollTop() < 5000) {
       $('.header_main-img-all').addClass('_active-all')
@@ -56,8 +58,10 @@ $(function () {
     }
 
   })
-})
+}
 
+a();
+b();
 // ========================================================
 
 $('.header_main-all-link, .overlay').on('click', function (e) {
@@ -76,10 +80,10 @@ $('.header_main-all-link, .overlay').on('click', function (e) {
 
 window.onload = function() {
   window.setInterval(function(){
-    var date = new Date();
-    var hourse = date.getHours();
-    var minutes = date.getMinutes();
-    var seconds = date.getSeconds()
+    let date = new Date();
+    let hourse = date.getHours();
+    let minutes = date.getMinutes();
+    let seconds = date.getSeconds()
 
     if (hourse < 10) hourse = "0" + hourse;
     if (minutes < 10) minutes = "0" + minutes;
