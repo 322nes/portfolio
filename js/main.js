@@ -1,39 +1,33 @@
+// function mobileNav() {
+//   const navBtnOpen = document.querySelector('#mobileOpen');
+//   const navBtnClose = document.querySelector('#mobileClose');
+//   const navOverlay = document.querySelector('#mobileOverlay');
+//   const nav = document.querySelector('#mobileNav');
 
-// const animItems = document.querySelectorAll('._anim-items');
+//   function toggleMobileNav() {
+//     navOverlay.classList.toggle('mobile-nav-overlay--show');
+//     nav.classList.toggle('mobile-nav--show');
+//     document.body.classList.toggle('noscroll');
+//   };
 
-// if (animItems.length > 0) {
-//   window.addEventListener('scroll', animOnScroll);
-//   function animOnScroll() {
-//     for (let index = 0; index < animItems.length; index++) {
-//       const animItem = animItems[index];
-//       const animItemHeight = animItem.offsetHeight;
-//       const animItemOffset = offset(animItem).top;
-//       const animStart = 4;
+//   navBtnOpen.onclick = toggleMobileNav;
+//   navBtnClose.onclick = toggleMobileNav;
+//   navOverlay.onclick = toggleMobileNav;
+// };
 
-//       let animItemPoint = window.innerHeight - animItemHeight / animStart;
-//       if (animItemHeight > window.innerHeight) {
-//         animItemPoint = window.innerHeight - window.innerHeight / animStart;
-//       }
+// function loader() {
+//   const loader = document.querySelector('#loader');
 
-//       if ((scrollY > animItemOffset - animItemPoint) && scrollY < (animItemOffset + animItemHeight)) {
-//         animItem.classList.add('_active-logo');
-//       } else {
-//         animItem.classList.remove('_active-logo');
+//   window.addEventListener('load', () => {
+//     setTimeout(() => {
+//       loader.classList.add('preloader-hidden');
+//     }, 1000)
+//   });
+// };
 
-//       }
-//     }
-//   }
-//   // function offset(el) {
-//   //   const rect = el.getBoundingClientRect(),
-//   //     scrollLeft = window.scrollX || document.documentElement.scrollLeft,
-//   //     scrolltop = window.scrollY || document.documentElement.scrollTop;
-//   //   return { top: rect.top + scrolltop, left: rect.left + scrollLeft }
-//   // }
+// loader();
+// mobileNav();
 
-//   setTimeout(() =>{
-//     animOnScroll();
-//   }, 300);
-// }
 
 function a() {
   setInterval(() => {
