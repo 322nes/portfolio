@@ -59,7 +59,7 @@ body {
   transform: translate(0, 200%);
 }
 
-.active-all {
+._active-all {
   pointer-events: all;
   transition: all 0.6s;
   transform: translate(0, 0);
@@ -191,11 +191,18 @@ body {
 
 .top--front {
   width: 50%;
+  opacity: 0;
+  transform: translate(-120%, 0);
+  transition: all 1.2s ease 0s;
 }
 
 .top--end {
   width: 50%;
+  opacity: 0;
+  transform: translate(120%, 0);
+  transition: all 1.2s ease 0s;
 }
+
 
 .frontend-bot {
   padding-top: 70px;
@@ -206,6 +213,9 @@ body {
 
 .bot--developer {
   width: 69%;
+  opacity: 0;
+  transform: translate(0, 100%);
+  transition: all 1.2s ease 0s;
 }
 
 .bot--about {
@@ -229,6 +239,11 @@ body {
   fill: #cb450c;
 }
 
+._active {
+  transform: translate(0, 0);
+  transform: rotate(0);
+  opacity: 1;
+}
 /* ===============================MAIN=ARTICLE=PORTFOLIO========================== */
 
 .main_portfolio {
