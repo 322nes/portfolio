@@ -174,11 +174,13 @@ body {
 
 /* =============================================MAIN========================================================= */
 
-.main {}
+.main {
+  width: 100%;
+}
 
-/* ======================================MAIN=SECTION=FRONTEND============================================= */
+/* ================================MAIN=SECTION=FRONTEND======================================= */
 
-.main__frontend-wrapper {
+.main__frontend {
   width: 95%;
   margin: 12% auto 0;
   display: flex;
@@ -235,7 +237,6 @@ body {
 .top--end:hover path,
 .top--end:hover rect,
 .bot--developer:hover path {
-  /* fill: #bdbdbdda; */
   fill: #cb450c;
 }
 
@@ -244,7 +245,8 @@ body {
   transform: rotate(0);
   opacity: 1;
 }
-/* ===============================MAIN=ARTICLE=PORTFOLIO========================== */
+
+/* ===============================MAIN=SECTION=PORTFOLIO=============================== */
 
 .main_portfolio {
   margin-top: 200px;
@@ -313,95 +315,124 @@ body {
 
 
 
-/* ===============================FOOTER============================================= */
-/* =======================FOOTER=TOP=========================== */
+/* ============================================FOOTER========================================================== */
 
 .footer {
   margin-top: 200px;
+  width: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%),
+    url('./../images/2.jpg'), lightgray 49% / cover no-repeat;
+    position: relative;
 }
 
-.footer-line {
-  width: 100%;
+.footer--line {
   height: 1px;
   background-color: #77777754;
 }
 
-.footer_wrapper {}
+/* ==================================FOOTER=TOP================================== */
 
-.footer_top {
-  height: 390px;
-  /* background: linear-gradient(180deg, #111111 0%, rgba(119,119,119,1) 100%); */
-  display: flex;
-  align-items: center;
-  text-align: center;
-}
-
-.footer_top-mail {
+.footer__top {
+  height: 500px;
   width: 100%;
   position: relative;
 }
 
-.mail-set {}
-
-.mail-set input {
-  height: 50px;
-  border-radius: 10px;
-  background-color: #111;
-  box-shadow: 0px 0px 5px 1.5px #777;
-  font-size: 20px;
-  /* padding-left: 12px; */
-  margin-right: 6px;
+.footer__top h2 {
   color: #cb450c;
-  font-family: Epilogue, sans-serif;
-  font-weight: 500;
+  font-weight: 800;
+  /* font-size: 100px; */
+  font-size: 5.3vw;
   text-align: center;
+  padding-top: 80px;
+  letter-spacing: -4px;
 }
 
-.mail-name:focus {
-  background-color: #cb450c4b;
+.top--form {
+  width: 80%;
+  height: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 100px auto 0;
 }
 
-.mail-email:focus {
-  background-color: #cb450c4b;
-}
-
-.mail-name {
-  width: 250px;
-}
-
-.mail-email {
-  width: 450px;
-}
-
-.mail-legend {
-  color: #777;
-  font-family: Epilogue, sans-serif;
-  font-weight: 600;
-  font-size: 3em;
-  position: absolute;
-  top: 120px;
-  left: 0;
-}
-
-.mail-button {
-  width: 650px;
-  height: 40px;
-  margin-top: 20px;
-  border-radius: 10px;
-  background-color: #111;
-  box-shadow: 0px 0px 5px 1.5px #cb450c;
-  font-size: 20px;
+.top--form input {
+  width: 370px;
+  height: 70px;
+  border-radius: 15px;
+  background-color: #111111;
+  box-shadow: 0px 0px 10px 0px #ffffff9c;
   color: #cb450c;
-  font-family: Epilogue, sans-serif;
-  font-weight: 500;
-  text-align: center;
-  position: relative;
+  font-size: 25px;
+  font-weight: 700;
+  padding-left: 20px;
 }
 
+.top--form button {
+  width: 370px;
+  height: 70px;
+  border-radius: 15px;
+  background-color: #cb450c;
+  box-shadow: 0px 0px 10px 0px #ffffff9c;
+  color: #111111;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.top--form input:focus {
+  background-color: #cb450c;
+  color: #111111;
+}
+
+.top--form button:focus {
+  /* background-color: #cb450cc9; */
+  background-color: #111111;
+  color: #cb450c;
+}
+
+:focus::placeholder {
+  color: #1111114b;
+}
 
 ::placeholder {
   color: #cb450cb9;
+  /* padding-left: 20px; */
 }
+
+.success {
+  background-color: #77777779;
+  color: #cb450c;
+  width: 70%;
+  height: 65px;
+  margin: -50px auto;
+  text-align: center;
+  font-size: 2.7vw;
+  font-weight: 700;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px 0px #ffffff9c;
+  transition: all 0.4s ease;
+  transform: translateY(-160%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.success--active{
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .orange-button {
   /* width: 300px; */
@@ -426,6 +457,7 @@ body {
   white-space: nowrap;
   width: 100%;
 }
+
 
 @keyframes gim {
   0% {
