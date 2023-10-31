@@ -85,37 +85,33 @@ for (let anchor of anchors) {
 
 // =====================TELEGRAMM=BOT===========================================================
 
-const TOKEN = "6886025668:AAHXpaVIAagdMyokKzR1FZCzIQKB_nwlAdg";
-const CHAT_ID = "-1002124195148";
-const URL_API = `https://api.telegram.org/bot${ TOKEN }/sendMessage`;
-const success = document.querySelector('.success');
 
-document.getElementById('tg').addEventListener('submit', function(e) {
-  e.preventDefault();
+// const success = document.querySelector('.success');
 
-  let message = `<b>НУКА БЕГОМ ВАЛИ РАБОТАТЬ!!!!!</b>\n`;
-  message += `<b>Имя: </b>${ this.name.value }\n`;
-  message += `<b>Почта: </b>${ this.email.value }`;
+// document.getElementById('tg').addEventListener('submit', function(e) {
+//   e.preventDefault();
 
-  axios.post(URL_API, {
-    chat_id: CHAT_ID,
-    parse_mode: 'html',
-    text: message,
-  })
-  .then((res) => {
-    this.name.value = "";
-    this.email.value = "";
-    // success.innerHTML = 'Я уже увидел ваше сообщение, ожидайте!';
-    // success.style.display = 'block';
-    success.classList.add('success--active')
-  })
-  .catch((err) => {
-    console.warn(err);
-  })
-  .finally(() => {
-    console.log('Сообщение отправлено успешно!');
-  })
-})
+//   let message = `<b>НУКА БЕГОМ ВАЛИ РАБОТАТЬ!!!!!</b>\n`;
+//   message += `<b>Имя: </b>${ this.name.value }\n`;
+//   message += `<b>Почта: </b>${ this.email.value }`;
+
+//   axios.post(URL_API, {
+//     chat_id: CHAT_ID,
+//     parse_mode: 'html',
+//     text: message,
+//   })
+//   .then((res) => {
+//     this.name.value = "";
+//     this.email.value = "";
+//     success.classList.add('success--active')
+//   })
+//   .catch((err) => {
+//     console.warn(err);
+//   })
+//   .finally(() => {
+//     console.log('Сообщение отправлено успешно!');
+//   })
+// })
 
 // =============================================================================================
 // const anchors = document.querySelectorAll('a[href*="#"]');
