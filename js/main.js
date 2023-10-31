@@ -33,10 +33,10 @@ function navigationBtnAll() {
 navigationBtnAll();
 // ======================ACTIVE==========================================================
 
-const elemFront = document.querySelector('.top--front');
-const elemEnd = document.querySelector('.top--end');
-const elemDev = document.querySelector('.bot--developer');
-const elemAbout = document.querySelector('.bot--about');
+const elemFront = document.querySelector('.main__frontend-top--front');
+const elemEnd = document.querySelector('.main__frontend-top--end');
+const elemDev = document.querySelector('.main__frontend-bot--developer');
+const elemAbout = document.querySelector('.main__frontend-bot--about');
 const elemNavAll = document.querySelector('.navigation__all');
 const elemFrontEndPlus = document.querySelector('._active');
 
@@ -86,32 +86,35 @@ for (let anchor of anchors) {
 // =====================TELEGRAMM=BOT===========================================================
 
 
-// const success = document.querySelector('.success');
+const TOKEN = "";
+const CHAT_ID = "";
+const URL_API = ``;
+const success = document.querySelector('.footer-success');
 
-// document.getElementById('tg').addEventListener('submit', function(e) {
-//   e.preventDefault();
+document.getElementById('tg').addEventListener('submit', function(e) {
+  e.preventDefault();
 
-//   let message = `<b>НУКА БЕГОМ ВАЛИ РАБОТАТЬ!!!!!</b>\n`;
-//   message += `<b>Имя: </b>${ this.name.value }\n`;
-//   message += `<b>Почта: </b>${ this.email.value }`;
+  let message = `<b>НУКА БЕГОМ РАБОТАТЬ!!!!!</b>\n`;
+  message += `<b>Имя: </b>${ this.name.value }\n`;
+  message += `<b>Почта: </b>${ this.email.value }`;
 
-//   axios.post(URL_API, {
-//     chat_id: CHAT_ID,
-//     parse_mode: 'html',
-//     text: message,
-//   })
-//   .then((res) => {
-//     this.name.value = "";
-//     this.email.value = "";
-//     success.classList.add('success--active')
-//   })
-//   .catch((err) => {
-//     console.warn(err);
-//   })
-//   .finally(() => {
-//     console.log('Сообщение отправлено успешно!');
-//   })
-// })
+  axios.post(URL_API, {
+    chat_id: CHAT_ID,
+    parse_mode: 'html',
+    text: message,
+  })
+  .then((res) => {
+    this.name.value = "";
+    this.email.value = "";
+    success.classList.add('success--active')
+  })
+  .catch((err) => {
+    console.warn(err);
+  })
+  .finally(() => {
+    console.log('Сообщение отправлено успешно!');
+  })
+})
 
 // =============================================================================================
 // const anchors = document.querySelectorAll('a[href*="#"]');

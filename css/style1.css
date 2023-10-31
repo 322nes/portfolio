@@ -187,18 +187,18 @@ body {
   flex-direction: column;
 }
 
-.frontend-top {
+.main__frontend-top {
   display: flex;
 }
 
-.top--front {
+.main__frontend-top--front {
   width: 50%;
   opacity: 0;
   transform: translate(-120%, 0);
   transition: all 1.2s ease 0s;
 }
 
-.top--end {
+.main__frontend-top--end {
   width: 50%;
   opacity: 0;
   transform: translate(120%, 0);
@@ -206,21 +206,21 @@ body {
 }
 
 
-.frontend-bot {
+.main__frontend-bot {
   padding-top: 70px;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
 }
 
-.bot--developer {
+.main__frontend-bot--developer {
   width: 69%;
   opacity: 0;
   transform: translate(0, 100%);
   transition: all 1.2s ease 0s;
 }
 
-.bot--about {
+.main__frontend-bot--about {
   width: 28%;
   color: #9c9c9c;
   font-family: Roboto, monospace;
@@ -229,14 +229,14 @@ body {
   white-space: nowrap;
 }
 
-.bot--about span {
+.main__frontend-bot--about span {
   font-size: 1.2vw;
 }
 
-.top--front:hover path,
-.top--end:hover path,
-.top--end:hover rect,
-.bot--developer:hover path {
+.main__frontend-top--front:hover path,
+.main__frontend-top--end:hover path,
+.main__frontend-top--end:hover rect,
+.main__frontend-bot--developer:hover path {
   fill: #cb450c;
 }
 
@@ -323,69 +323,95 @@ body {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%),
     url('./../images/2.jpg'), lightgray 49% / cover no-repeat;
     position: relative;
+    height: 90vh;
 }
 
-.footer--line {
-  height: 1px;
-  background-color: #77777754;
-}
-
-/* ==================================FOOTER=TOP================================== */
-
-.footer__top {
-  height: 500px;
-  width: 100%;
-  position: relative;
-}
-
-.footer__top h2 {
+.footer h2 {
   color: #cb450c;
   font-weight: 800;
-  /* font-size: 100px; */
-  font-size: 5.3vw;
+  font-size: 10vw;
   text-align: center;
-  padding-top: 80px;
+  padding-top: 0px;
   letter-spacing: -4px;
+  line-height: 120%;
 }
 
-.top--form {
-  width: 80%;
-  height: 100px;
+.footer-success {
+  background-color: #77777779;
+  color: #cb450c;
+  width: 440px;
+  height: 90px;
+  text-align: center;
+  font-size: 2vw;
+  font-weight: 700;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px 0px #7777779c;
+  transition: all 0.4s ease;
+  transform: translateX(-120%);
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  bottom: 8%;
+  left: 10%;
+}
+
+.success--active{
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: all;
+}
+
+/* ==================================FOOTER=LEFT================================== */
+
+.footer__left {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+}
+
+.footer__left--form {
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
   margin: 100px auto 0;
 }
 
-.top--form input {
-  width: 370px;
-  height: 70px;
+.footer__left--form input {
+  width: 440px;
+  height: 82px;
   border-radius: 15px;
   background-color: #111111;
-  box-shadow: 0px 0px 10px 0px #ffffff9c;
+  box-shadow: 0px 0px 8px 1px #cb450c;
   color: #cb450c;
   font-size: 25px;
   font-weight: 700;
   padding-left: 20px;
 }
 
-.top--form button {
-  width: 370px;
-  height: 70px;
+.footer__left--form input:nth-child(2) {
+  margin: 40px 0px 40px 0px;
+}
+
+.footer__left--form button {
+  width: 440px;
+  height: 82px;
   border-radius: 15px;
   background-color: #cb450c;
-  box-shadow: 0px 0px 10px 0px #ffffff9c;
+  box-shadow: 0px 0px 8px 1px #cb450c;
+  border: 3px solid;
   color: #111111;
   font-size: 25px;
   font-weight: 700;
 }
 
-.top--form input:focus {
+.footer__left--form input:focus {
   background-color: #cb450c;
   color: #111111;
+  border: 3px solid;
 }
 
-.top--form button:focus {
-  /* background-color: #cb450cc9; */
+.footer__left--form button:focus {
+  border-color: #111111;
   background-color: #111111;
   color: #cb450c;
 }
@@ -399,137 +425,21 @@ body {
   /* padding-left: 20px; */
 }
 
-.success {
-  background-color: #77777779;
-  color: #cb450c;
-  width: 70%;
-  height: 65px;
-  margin: -50px auto;
-  text-align: center;
-  font-size: 2.7vw;
-  font-weight: 700;
-  border-radius: 15px;
-  box-shadow: 0px 0px 10px 0px #ffffff9c;
-  transition: all 0.4s ease;
-  transform: translateY(-160%);
-  opacity: 0;
-  pointer-events: none;
-}
 
-.success--active{
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: all;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-.orange-button {
-  /* width: 300px; */
-  /* height: 150px; */
-  max-width: 30%;
-  border: 1px solid #777;
-  /* position: relative; */
-  /* top: 50px; */
-  /* left: 40%; */
-  color: #cb450c;
-  /* margin-left: -150px; */
-  /* overflow: hidden; */
-}
-
-.orange-button-pognali {
+.footer__right {
   display: flex;
-  width: 200%;
-  animation: gim 5s linear infinite;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  text-wrap: nowrap;
+  align-items: end;
+  position: absolute;
+  top: 25%;
+  right: 5%;
 }
 
-.orange-button-pognali h4 {
-  white-space: nowrap;
-  width: 100%;
+.footer__right-item {
+  font-size: 6vw;
+  font-weight: 800;
+  line-height: 120%;
+  color: #777777;
 }
-
-
-@keyframes gim {
-  0% {
-    transform: translateX(0%);
-  }
-
-  50% {
-    /* background-color: #ff0000; */
-  }
-
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-/* ================================================= */
-
-
-.marquee-infinite {
-  height: 100px;
-  margin: 70px auto;
-  /* border: 1px solid #ffffff; */
-  box-shadow: 0px 0px 5px 0px #fff;
-  border-radius: 7px;
-  max-width: 36%;
-  overflow: hidden;
-  background-color: #111;
-  color: #cb450c;
-  font-size: 25px;
-
-}
-
-.marquee-infinite div {
-  display: flex;
-  width: 200%;
-  animation: marquee-infinite 5s linear infinite;
-}
-
-.marquee-infinite h3 {
-  white-space: nowrap;
-  width: 100%;
-}
-
-.marquee-infinite:hover div {
-  animation-play-state: paused;
-  width: 0px;
-  color: #e5ff00;
-  transition: all 1.5s;
-}
-
-@keyframes marquee-infinite {
-  0% {
-    transform: translateX(0%);
-  }
-
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-/* ================================================= */
-
-
-/* =======================FOOTER=BOT========================== */
-
-.footer_bot {
-  height: 350px;
-  /* background-color: #777; */
-}
-
-.footer_bot-line {}
-
-.footer_bot-line-item {}
-
-/* ============================================================================ */
