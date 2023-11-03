@@ -69,7 +69,6 @@ scrollActive(elemDev, 800);
 
 // =======================SCROLL=SMOOTH=========================================================
 
-
 const smoothLinks = document.querySelectorAll('a[href^="#"]');
 for (let smoothLink of smoothLinks) {
     smoothLink.addEventListener('click', function (e) {
@@ -85,10 +84,10 @@ for (let smoothLink of smoothLinks) {
 
 // =====================TELEGRAMM=BOT===========================================================
 
+import { apiCHAT_ID, apiURL_API } from "../secret/api-tg.js";
 
-const TOKEN = "";
-const CHAT_ID = "";
-const URL_API = ``;
+const CHAT_ID = apiCHAT_ID;
+const URL_API = apiURL_API;
 const success = document.querySelector('.footer-success');
 
 document.getElementById('tg').addEventListener('submit', function(e) {
